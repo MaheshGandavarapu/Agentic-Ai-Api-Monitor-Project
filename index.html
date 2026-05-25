@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Agentic AI API Debugging Agent</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<div class="sidebar">
+  <h2>🤖 AI Agent</h2>
+  <p>API Failure Detection</p>
+</div>
+
+<main>
+  <header>
+    <h1>Real-Time API Failure Detection & Debugging Agent</h1>
+    <span id="agentStatus">Agent Observing Logs...</span>
+    <h3 id="systemHealth">🟢 System Stable</h3>
+    <h4 id="liveTime"></h4>
+  </header>
+
+  <div class="workflow">
+    <div>👀 Observe Logs</div>
+    <div>🧠 Analyze Failures</div>
+    <div>⚠ Detect Anomalies</div>
+    <div>💡 Recommend Fixes</div>
+    <div>🚨 Trigger Alerts</div>
+  </div>
+
+  <section class="cards">
+    <div class="card"><h3>Total Requests</h3><p id="total">0</p></div>
+    <div class="card"><h3>Failures</h3><p id="failures">0</p></div>
+    <div class="card"><h3>High Severity</h3><p id="high">0</p></div>
+    <div class="card"><h3>Avg Latency</h3><p id="latency">0 ms</p></div>
+  </section>
+
+  <section class="charts">
+    <div class="chartBox">
+      <h2>Status Code Analysis</h2>
+      <canvas id="statusChart"></canvas>
+    </div>
+    <div class="chartBox">
+      <h2>Latency Monitoring</h2>
+      <canvas id="latencyChart"></canvas>
+    </div>
+  </section>
+
+  <section class="panel">
+    <h2>🚨 Live AI Debugging Recommendations</h2>
+    <div id="alerts"></div>
+  </section>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,130 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background: #071b14;
+  color: white;
+  display: flex;
+}
+
+.sidebar {
+  width: 240px;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #0b3d2e, #03110c);
+  padding: 30px;
+  position: fixed;
+}
+
+.sidebar h2 {
+  margin-bottom: 10px;
+}
+
+main {
+  margin-left: 240px;
+  padding: 30px;
+  width: 100%;
+}
+
+header {
+  background: rgba(255,255,255,0.08);
+  padding: 25px;
+  border-radius: 20px;
+  margin-bottom: 25px;
+  backdrop-filter: blur(10px);
+}
+
+header h1 {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+#agentStatus {
+  color: #7cffb2;
+  font-weight: bold;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.card, .chartBox, .panel {
+  background: rgba(255,255,255,0.09);
+  border: 1px solid rgba(255,255,255,0.12);
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
+
+.card h3 {
+  color: #b6ffd4;
+}
+
+.card p {
+  font-size: 32px;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.charts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+  margin-top: 25px;
+}
+
+.panel {
+  margin-top: 25px;
+}
+
+.alert {
+  background: rgba(255,255,255,0.08);
+  border-left: 5px solid #ff4d4d;
+  padding: 15px;
+  border-radius: 12px;
+  margin-top: 15px;
+  animation: fadeIn 0.5s ease;
+}
+
+.alert h3 {
+  color: #ffb3b3;
+}
+
+.alert p {
+  margin-top: 6px;
+  line-height: 1.5;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.workflow{
+  display:flex;
+  gap:15px;
+  margin-top:20px;
+  flex-wrap:wrap;
+}
+
+.workflow div{
+  background:rgba(255,255,255,0.08);
+  padding:12px 18px;
+  border-radius:12px;
+  border:1px solid rgba(255,255,255,0.1);
+  color:#9cffc7;
+  font-weight:600;
+}
+#agentStatus{
+  animation:pulse 1.5s infinite;
+}
+
+@keyframes pulse{
+  0%{opacity:0.5;}
+  50%{opacity:1;}
+  100%{opacity:0.5;}
+}
